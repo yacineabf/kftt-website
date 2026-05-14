@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KFTT Logistics - Votre Passerelle Stratégique vers le Commerce Mondial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+    html[lang="fr"] {
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Roboto', sans-serif;
+    }
+    html[lang="ar"] {
+        --font-heading: 'Noto Sans Arabic', sans-serif;
+        --font-body: 'Noto Sans Arabic', sans-serif;
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    html[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
+    html[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
+    html[dir="rtl"] .pl-20 { padding-left: 0; padding-right: 5rem; }
+    html[dir="rtl"] .pr-6 { padding-right: 0; padding-left: 1.5rem; }
+    html[dir="rtl"] .left-6 { left: auto; right: 1.5rem; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+            "primary": "#1D3557",
+            "primary-container": "#1D3557",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#1D3557",
+            "primary-fixed-dim": "#1D3557",
+            "growth-green": "#2A9D8F",
+            "secondary": "#2A9D8F",
+            "surface": "#F4F4F4",
+            "surface-bright": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#E5E5E5",
+            "on-surface": "#1A1A1A",
+            "on-surface-variant": "#44474e",
+            "outline-variant": "#c4c6cf",
+            "outline": "#74777f",
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "base": "8px",
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "section-gap": "80px",
+                "container-max": "1200px"
+        },
+        "fontFamily": {
+                "headline-md": ["var(--font-heading)"],
+                "display-lg-mobile": ["var(--font-heading)"],
+                "label-caps": ["var(--font-heading)"],
+                "body-md": ["var(--font-body)"],
+                "body-lg": ["var(--font-body)"],
+                "display-lg": ["var(--font-heading)"]
+        },
+        "fontSize": {
+                "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+        }
+      }
+    }
+  }
+</script>
+<script>
+    const translations = {
+        "fr": {
+            "nav_home": "Accueil",
+            "nav_services": "Services",
+            "nav_about": "À Propos",
+            "nav_contact": "Contact",
+            "nav_quote": "Demander un Devis",
+            "hero_badge": "Basé à Marrakech",
+            "hero_title": "Votre Passerelle Stratégique vers le <span class='text-growth-green'>Commerce Mondial.</span>",
+            "hero_subtext": "Solutions professionnelles de transit douanier et de fret international. Assurer l'intégrité structurelle et la dynamique logistique pour les acteurs B2B du monde entier.",
+            "hero_cta_quote": "Demander un Devis",
+            "hero_cta_services": "Nos Services",
+            "track_title": "Suivre Votre Expédition",
+            "track_subtitle": "Suivez votre cargaison en temps réel.",
+            "track_placeholder": "Entrez l'ID de suivi (ex. KFTT-1234567)",
+            "track_btn": "Suivre Maintenant",
+            "values_title": "Cœur Logistique à Haute Conformité",
+            "values_desc": "Nous standardisons le transit mondial. Notre approche rigoureuse des douanes et du fret garantit que votre cargaison se déplace avec une précision mathématique et une fiabilité inébranlable.",
+            "val1_title": "Expertise Douanière",
+            "val1_desc": "Naviguer dans des cadres réglementaires complexes avec une précision standardisée et planifiée pour éviter les retards de transit.",
+            "val2_title": "Rayonnement International",
+            "val2_desc": "Connectivité mondiale macro-niveau transparente, tirant parti d'un vaste réseau pour assurer une dynamique cinétique au-delà des frontières.",
+            "val3_title": "Fiabilité Locale",
+            "val3_desc": "Une force opérationnelle profondément ancrée à Marrakech, fournissant une fondation de haute autorité et digne de confiance pour votre chaîne logistique mondiale.",
+            "footer_rights": "© 2024 KFTT Logistique & Expédition de Fret. Tous droits réservés.",
+            "footer_privacy": "Politique de Confidentialité",
+            "footer_terms": "Conditions d'Utilisation",
+            "footer_network": "Réseau Mondial",
+            "footer_track": "Suivre l'Expédition"
+        },
+        "ar": {
+            "nav_home": "الرئيسية",
+            "nav_services": "خدماتنا",
+            "nav_about": "من نحن",
+            "nav_contact": "تواصل معنا",
+            "nav_quote": "طلب عرض سعر",
+            "hero_badge": "مقرنا في مراكش",
+            "hero_title": "بوابتك الاستراتيجية نحو <span class='text-growth-green'>التجارة العالمية.</span>",
+            "hero_subtext": "حلول احترافية للعبور الجمركي والشحن الدولي. ضمان السلامة الهيكلية والديناميكية اللوجستية للشركات في جميع أنحاء العالم.",
+            "hero_cta_quote": "طلب عرض سعر",
+            "hero_cta_services": "خدماتنا",
+            "track_title": "تتبع الشحنة",
+            "track_subtitle": "تتبع شحنتك في الوقت الفعلي.",
+            "track_placeholder": "أدخل معرف التتبع (مثال KFTT-1234567)",
+            "track_btn": "تتبع الآن",
+            "values_title": "قلب لوجستي عالي الامتثال",
+            "values_desc": "نحن نوحد معايير العبور العالمي. يضمن نهجنا الصارم للجمارك والشحن انتقال شحنتك بدقة رياضية وموثوقية لا تتزعزع.",
+            "val1_title": "خبرة جمركية",
+            "val1_desc": "التنقل في الأطر التنظيمية المعقدة بدقة موحدة ومخططة لتجنب تأخير العبور.",
+            "val2_title": "تغطية دولية",
+            "val2_desc": "اتصال عالمي سلس على المستوى الكلي، بالاستفادة من شبكة واسعة لضمان ديناميكية حركية عبر الحدود.",
+            "val3_title": "موثوقية محلية",
+            "val3_desc": "قوة تشغيلية متجذرة بعمق في مراكش، توفر أساسًا عالي السلطة وجديرًا بالثقة لسلسلة التوريد العالمية الخاصة بك.",
+            "footer_rights": "© 2024 KFTT لوجستيات وشحن. جميع الحقوق محفوظة.",
+            "footer_privacy": "سياسة الخصوصية",
+            "footer_terms": "شروط الاستخدام",
+            "footer_network": "الشبكة العالمية",
+            "footer_track": "تتبع الشحنة"
+        }
+    };
+
+    function toggleLanguage() {
+        const currentLang = localStorage.getItem('language_pref') || 'fr';
+        const newLang = currentLang === 'fr' ? 'ar' : 'fr';
+        setLanguage(newLang);
+    }
+
+    function setLanguage(lang) {
+        localStorage.setItem('language_pref', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+        
+        document.getElementById('lang-toggle-text').innerText = lang === 'fr' ? 'AR' : 'FR';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language_pref') || 'fr';
+        setLanguage(savedLang);
+        
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-[64px] py-base max-w-[1536px] mx-auto">
+<a class="flex items-center" href="index.html">
+<img alt="KFTT Logo" class="h-10 w-auto object-contain" src="logos/LogoKftt enhanced photoroom.png"/>
+</a>
+<div class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps uppercase tracking-wider">
+<a class="text-primary border-b-2 border-growth-green font-bold pb-1 hover:bg-surface-container-low transition-all duration-200 opacity-80" href="index.html" data-i18n="nav_home">Accueil</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="services.html" data-i18n="nav_services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="apropos.html" data-i18n="nav_about">À Propos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="contact.html" data-i18n="nav_contact">Contact</a>
+</div>
+<div class="flex items-center gap-[12px]">
+<button onclick="toggleLanguage()" class="font-label-caps text-label-caps px-2 py-1 border border-outline-variant rounded hover:bg-surface-container-low transition-colors flex items-center gap-1 text-primary">
+    <span class="material-symbols-outlined text-[16px]">language</span>
+    <span id="lang-toggle-text">AR</span>
+</button>
+<a href="contact.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-[24px] py-[12px] rounded hidden md:block hover:bg-opacity-90 transition-colors" data-i18n="nav_quote">Demander un Devis</a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-1">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant px-margin-mobile py-4 flex flex-col gap-4 font-label-caps uppercase tracking-wider">
+<a class="text-primary font-bold" href="index.html" data-i18n="nav_home">Accueil</a>
+<a class="text-on-surface-variant" href="services.html" data-i18n="nav_services">Services</a>
+<a class="text-on-surface-variant" href="apropos.html" data-i18n="nav_about">À Propos</a>
+<a class="text-on-surface-variant" href="contact.html" data-i18n="nav_contact">Contact</a>
+<a href="contact.html" class="bg-primary text-on-primary text-center py-2 rounded mt-2" data-i18n="nav_quote">Demander un Devis</a>
+</div>
+</nav>
+
+<!-- Main Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-primary min-h-[600px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Global Shipping Port" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnsj90tMvINRfX_mcXsy4XOsMJ_zdhWmyhJvgYcjgTI20R9Rw5pbY3gAZNsYMnELRprWU4rUrXwpyPQ-LL0a8oWnYeyRUzbK9jIMY1pbXyfhtEDzYEAMeG_kyVFS-IIhL3qyH4dyZgpDYQLa5ceLk07I8itWDSp2BUSoMDpYYRVRMOczmfgKb-v58QQqvZKoadOURKtCLTFtoFphfQ8o5qvHrH6jC9P3A75cu8W3joxkHKXt1rS9sL19T8OnigzOKfoFs-BiC32Bo"/>
+</div>
+<div class="relative z-10 max-w-[1536px] mx-auto px-margin-mobile md:px-[64px] py-[80px] grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+<div class="md:col-span-8 lg:col-span-6 flex flex-col gap-[48px]">
+<div class="flex items-center gap-[12px] bg-white/10 backdrop-blur-sm px-[12px] py-[4px] rounded w-fit border border-white/20">
+<span class="material-symbols-outlined text-growth-green" style="font-variation-settings: 'FILL' 1;">public</span>
+<span class="text-white font-label-caps text-label-caps uppercase tracking-wider" data-i18n="hero_badge">Basé à Marrakech</span>
+</div>
+<h1 class="text-display-lg-mobile font-display-lg-mobile md:text-display-lg md:font-display-lg text-white" data-i18n="hero_title">
+Votre Passerelle Stratégique vers le <span class="text-growth-green">Commerce Mondial.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-white/90 max-w-lg" data-i18n="hero_subtext">
+Solutions professionnelles de transit douanier et de fret international. Assurer l'intégrité structurelle et la dynamique logistique pour les acteurs B2B du monde entier.
+</p>
+<div class="flex flex-wrap gap-[24px] mt-[12px]">
+<a href="contact.html" class="bg-growth-green text-white font-label-caps text-label-caps px-[24px] py-[12px] rounded hover:opacity-90 transition-opacity flex items-center gap-[4px]">
+    <span data-i18n="hero_cta_quote">Demander un Devis</span>
+    <span class="material-symbols-outlined rtl:rotate-180">arrow_forward</span>
+</a>
+<a href="services.html" class="bg-transparent border border-white text-white font-label-caps text-label-caps px-[24px] py-[12px] rounded hover:bg-white/10 transition-colors" data-i18n="hero_cta_services">
+    Nos Services
+</a>
+</div>
+</div>
+</div>
+<!-- Structural Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none border-x border-white/10 grid grid-cols-4 md:grid-cols-12 gap-gutter px-margin-mobile md:px-[64px] max-w-[1536px] mx-auto z-0">
+<div class="border-l border-white/5 h-full"></div>
+<div class="border-l border-white/5 h-full"></div>
+<div class="border-l border-white/5 h-full"></div>
+<div class="border-l border-white/5 h-full"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block"></div>
+<div class="border-l border-white/5 h-full hidden md:block border-r"></div>
+</div>
+</section>
+
+<!-- Shipment Tracking Section -->
+<section class="bg-surface-container-low py-[48px] border-b border-outline-variant/30">
+<div class="max-w-[1536px] mx-auto px-margin-mobile md:px-[64px]">
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant p-[24px] md:p-[48px] flex flex-col md:flex-row items-center gap-[48px]">
+<div class="flex flex-col gap-[4px] flex-shrink-0">
+<h2 class="text-headline-md font-headline-md text-primary" data-i18n="track_title">Suivre Votre Expédition</h2>
+<p class="text-body-md text-on-surface-variant" data-i18n="track_subtitle">Suivez votre cargaison en temps réel.</p>
+</div>
+<div class="w-full flex flex-col sm:flex-row gap-[12px]">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-20 pr-6 py-[12px] rounded border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-surface-bright text-on-surface font-body-md" data-i18n-placeholder="track_placeholder" placeholder="Entrez l'ID de suivi (ex. KFTT-1234567)" type="text"/>
+</div>
+<button class="bg-growth-green text-white font-label-caps text-label-caps px-[48px] py-[12px] rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-[4px] whitespace-nowrap shadow-md">
+    <span data-i18n="track_btn">Suivre Maintenant</span>
+    <span class="material-symbols-outlined">location_on</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Bento Grid -->
+<section class="py-[80px] px-margin-mobile md:px-[64px] max-w-[1536px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Intro Column -->
+<div class="md:col-span-12 lg:col-span-4 flex flex-col gap-[24px] justify-center mb-[24px] lg:mb-0">
+<h2 class="text-[32px] leading-[40px] font-bold font-headline-md text-primary" data-i18n="values_title">Cœur Logistique à Haute Conformité</h2>
+<p class="text-body-md font-body-md text-on-surface-variant" data-i18n="values_desc">Nous standardisons le transit mondial. Notre approche rigoureuse des douanes et du fret garantit que votre cargaison se déplace avec une précision mathématique et une fiabilité inébranlable.</p>
+</div>
+<!-- Bento Grid -->
+<div class="md:col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-[24px] flex flex-col gap-[12px] hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mt-[12px]" data-i18n="val1_title">Expertise Douanière</h3>
+<p class="text-body-md font-body-md text-on-surface-variant" data-i18n="val1_desc">Naviguer dans des cadres réglementaires complexes avec une précision standardisée et planifiée pour éviter les retards de transit.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-[24px] flex flex-col gap-[12px] hover:border-primary transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mt-[12px]" data-i18n="val2_title">Rayonnement International</h3>
+<p class="text-body-md font-body-md text-on-surface-variant" data-i18n="val2_desc">Connectivité mondiale macro-niveau transparente, tirant parti d'un vaste réseau pour assurer une dynamique cinétique au-delà des frontières.</p>
+</div>
+<!-- Feature 3 (Wide) -->
+<div class="md:col-span-2 bg-surface-container-lowest border-s-4 border-s-growth-green border border-y-outline-variant border-e-outline-variant rounded-lg p-[24px] flex flex-col md:flex-row gap-[24px] items-center">
+<div class="w-16 h-16 rounded-full bg-growth-green/10 flex-shrink-0 flex items-center justify-center text-growth-green">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col gap-[4px]">
+<h3 class="text-headline-md font-headline-md text-primary" data-i18n="val3_title">Fiabilité Locale</h3>
+<p class="text-body-md font-body-md text-on-surface-variant" data-i18n="val3_desc">Une force opérationnelle profondément ancrée à Marrakech, fournissant une fondation de haute autorité et digne de confiance pour votre chaîne logistique mondiale.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary w-full mt-auto text-white">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-[64px] py-[80px] max-w-[1536px] mx-auto w-full">
+<div class="flex flex-col gap-[24px]">
+<a class="flex items-center w-fit" href="index.html">
+<img alt="KFTT Logo" class="h-12 w-auto object-contain bg-surface p-1 rounded" src="logos/LogoKftt enhanced photoroom.png"/>
+</a>
+<div class="font-body-md text-body-md text-white/80 flex flex-col gap-1">
+<p data-i18n="footer_rights">© 2024 KFTT Logistique & Expédition de Fret. Tous droits réservés.</p>
+<p>ICE: 003348123000065 | RC: 141973</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-center">
+<div class="flex flex-wrap gap-[24px] font-body-md text-body-md">
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_privacy">Politique de Confidentialité</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_terms">Conditions d'Utilisation</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_network">Réseau Mondial</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_track">Suivre l'Expédition</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

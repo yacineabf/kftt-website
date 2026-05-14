@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>À Propos | KFTT Logistics</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-primary": "#adc7f7",
+                "primary-container": "#1a365d",
+                "surface-container-highest": "#e0e3e8",
+                "on-tertiary-fixed-variant": "#524600",
+                "surface-bright": "#f7f9ff",
+                "on-tertiary-fixed": "#211b00",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#eef1f6",
+                "surface-variant": "#e0e3e8",
+                "surface-tint": "#455f88",
+                "tertiary-fixed": "#ffe251",
+                "inverse-surface": "#2d3135",
+                "secondary-fixed-dim": "#a7d64a",
+                "on-surface-variant": "#43474e",
+                "on-secondary-fixed": "#141f00",
+                "secondary-fixed": "#c2f363",
+                "error": "#ba1a1a",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f7f9ff",
+                "primary-fixed": "#d6e3ff",
+                "primary-fixed-dim": "#adc7f7",
+                "secondary-container": "#c2f363",
+                "outline-variant": "#c4c6cf",
+                "on-error-container": "#93000a",
+                "background": "#f7f9ff",
+                "surface-container-high": "#e5e8ee",
+                "secondary": "#4a6800",
+                "on-secondary-fixed-variant": "#364e00",
+                "on-secondary": "#ffffff",
+                "on-background": "#181c20",
+                "on-tertiary": "#ffffff",
+                "on-error": "#ffffff",
+                "surface-dim": "#d7dadf",
+                "surface-container-low": "#f1f4f9",
+                "on-tertiary-container": "#4a3f00",
+                "on-primary-container": "#86a0cd",
+                "on-primary": "#ffffff",
+                "tertiary": "#6d5e00",
+                "outline": "#74777f",
+                "tertiary-container": "#c5aa00",
+                "on-primary-fixed-variant": "#2d476f",
+                "tertiary-fixed-dim": "#e4c600",
+                "primary": "#002045",
+                "on-surface": "#181c20",
+                "surface-container": "#ebeef3",
+                "on-primary-fixed": "#001b3c",
+                "on-secondary-container": "#4e6e00"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "sm": "12px",
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "xl": "80px",
+                "base": "8px",
+                "xs": "4px",
+                "md": "24px",
+                "section-gap": "80px",
+                "container-max": "1200px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Open Sans"
+                ],
+                "headline-lg-mobile": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "display-lg-mobile": [
+                        "Montserrat"
+                ],
+                "label-caps": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Open Sans"
+                ],
+                "display-lg": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full md:px-16 px-margin-mobile py-base max-w-screen-2xl mx-auto">
+<a class="block" href="#">
+<img alt="KFTT Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_gv_085FDBN9XYgbIJ1GIAN6DHHk8-iO7ZG1SAgEpT6V1_RHGe7_leFCb-H5RKbmdz1jBsJqSyBaQdLzvOyYTyICs1j_z8v0FJgP2Zz4wkWv0GDODdfhiGm2GjGr0aRAD4b17it35sWmv-qEV8haZau8RQBM4JGlvPR30lWCoNElwoyuH8k6laMOZPwv356L8C55Iwv9Vzhpo6rvv9DfGmwSKtLaq-LASjRGJHUVUXHeozyXpiaY-NFHbdjZJ3309qDkzjSnWCAI"/>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-1 rounded" href="#">Accueil</a>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-1 rounded" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-primary dark:text-primary-fixed-dim border-b-2 border-secondary font-bold pb-1 px-3 py-1 rounded" href="#">À Propos</a>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-all duration-200 px-3 py-1 rounded" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase tracking-wider px-6 py-3 rounded-DEFAULT hover:opacity-90 transition-opacity">
+                Demander un Devis
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-screen-2xl mx-auto">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[614px] flex items-center justify-center px-margin-mobile md:px-16 py-section-gap bg-surface-container-high border-b border-outline-variant overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-multiply" data-alt="A striking wide-angle photograph of an immense, hyper-modern shipping port at dawn. Rows of precisely aligned shipping containers stretch into the horizon, colored in deep navy blues and muted industrial greys. The scene is illuminated by crisp, cool morning light, casting sharp structural shadows. The overall aesthetic is highly professional, corporate modern, conveying massive scale, structural integrity, and global connectivity, perfectly aligned with a high-end logistics brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1HpFwT4v0xuoF-TM4M3f7KMtwMaxFtaNOkC3v-751Q9oD895wqhQyPm6rlKKe7Sf7gOZwnrlCRO7xamyk5eYhxv5q2FdSCLCM75R5-Mqfzm6DHymqhzhLx1Wc0GgxYRoTCuYNURXT41jlXiS_IhAYZQVw3D9xrv0imCgf54vI1dniClM8F2ykZojImSHH8IXEoq5PHrmdD_7dxvI00OapEW-Ww-DshnM3nuLWsI1egTt1LqlGe2jZP8NykDLozotJYtk1f232AhQ"/>
+<div class="relative z-10 max-w-4xl text-center flex flex-col items-center gap-6">
+<span class="text-primary font-label-caps text-label-caps uppercase tracking-widest border border-outline-variant px-3 py-1 rounded-DEFAULT bg-surface-container-lowest">Identité d'Entreprise</span>
+<h1 class="font-display-lg text-display-lg text-primary-container">Professionnaliser le Corridor de Transport Marocain</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-3">
+                    KFTT Logistics opère à l'intersection de l'intégrité structurelle et de l'élan cinétique, établissant des solutions de chaîne d'approvisionnement de haute autorité pour les acteurs B2B à travers les routes mondiales.
+                </p>
+</div>
+</section>
+<!-- Leadership Section -->
+<section class="py-section-gap px-margin-mobile md:px-16 w-full border-b border-outline-variant bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative aspect-[4/5] bg-surface-container border border-outline-variant rounded-DEFAULT overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-90 contrast-125" data-alt="A highly professional portrait of a female executive in the logistics industry. She is standing confidently in a modern, well-lit corporate office with industrial architectural elements like steel beams and large glass windows in the background. She is wearing a tailored dark navy suit. The lighting is crisp and bright, establishing a high-authority, reliable corporate modern aesthetic. The color palette emphasizes cool neutrals, whites, and deep navy to match the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6w5juRzu3JDRzTnbQ-jeHXmMJMd7Wt7B61TLIED6zdY71ZgHFShE1pQuZgKP0_NdwIH4II-QB6NbCnUft5BAVts13GL_qE5fJNbroxIQuYze_5V7lrAw8X2qh5HZuhwOShW29RPlxUSs05Le84f_nrzn4St0MEiNp1ydmGufs_Ly6jFEiUOaAWNubt_HdtRi6zhaQWEdOG9M67iNG2MfcEVKiNx5sL-lCwOjAYn2ZrMxeSNdNYa0QpSpDX4kldqI5b6Cna7Cxc3w"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary-container/90 backdrop-blur-sm p-6 border-t border-primary text-on-primary">
+<h3 class="font-headline-md text-headline-md">Kawtar Frindi</h3>
+<p class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider mt-1">Directrice Générale</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[32px]" data-icon="account_balance">account_balance</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary-container">Leadership &amp; Vision</h2>
+</div>
+<div class="w-12 h-1 bg-secondary-fixed"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sous la direction stratégique de Kawtar Frindi, KFTT Logistics s'est transformée en un pilier de fiabilité au sein du secteur de la chaîne d'approvisionnement nord-africaine. Sa philosophie de leadership met l'accent sur une conformité rigoureuse, une intégrité opérationnelle structurelle et un engagement sans faille envers le succès des partenaires B2B.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Nous ne nous contentons pas de déplacer du fret ; nous concevons des solutions de transit. En insistant sur la précision mathématique dans notre planification logistique et en favorisant une culture de la responsabilité, KFTT s'assure que chaque mouvement de cargaison est exécuté avec une efficacité de niveau industriel.
+                    </p>
+<div class="mt-6 flex gap-gutter">
+<div class="flex flex-col border-l-2 border-secondary-fixed pl-3">
+<span class="font-headline-md text-headline-md text-primary-container">100%</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Taux de Conformité</span>
+</div>
+<div class="flex flex-col border-l-2 border-outline-variant pl-3">
+<span class="font-headline-md text-headline-md text-primary-container">Niveau 1</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Partenaires Stratégiques</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Expertise - Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-16 w-full bg-surface-bright">
+<div class="mb-12">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-primary-container">Expertise Régionale</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3 max-w-3xl">Connaissance approfondie du paysage économique de Marrakech-Safi, reliant les industries locales vitales aux routes maritimes et aériennes mondiales.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 flex flex-col md:flex-row gap-6 items-center">
+<div class="flex-1 flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary-container text-[40px]" data-icon="public">public</span>
+<h3 class="font-headline-md text-headline-md text-primary-container">Le Corridor Marrakech-Safi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Notre principal centre opérationnel tire parti du positionnement géographique stratégique de la région de Marrakech-Safi. Nous possédons une connaissance granulaire de l'infrastructure locale, des environnements réglementaires et des capacités portuaires, ce qui nous permet de naviguer dans cette zone économique cruciale avec un élan cinétique inégalé.
+                        </p>
+</div>
+<div class="flex-1 w-full relative aspect-video bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover grayscale opacity-80 mix-blend-luminosity" data-alt="A stylized, high-contrast aerial map view of the Marrakech-Safi region in Morocco. The terrain is rendered in cool, neutral greys and stark whites, resembling a technical architectural blueprint or digital logistics dashboard. Key transport corridors and port locations are subtly highlighted with geometric nodes in vibrant secondary green. The visual style is strictly corporate modern, emphasizing data-driven precision, geographical connectivity, and industrial-scale planning without any rustic or traditional elements." data-location="Marrakech-Safi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOYL5g1JisUcr7ifPp2iPR3B_ffJpPf6zMvX-4Q5cZz5Imxc7sHLgW4Bsuy7P26-aJe20VP-bB_YrzII2bmBKwTIM7HDR_9ukecjU_hKna7hXIxY1WdGIRr9QNKG1ySnMiTXINdGeOMuqB6veja6-mKmebfYCVkO6HhV3rJOOA9rbd2jj0caDz5Xwz6hvQKUof_EqMbQCrF75w0MTcQnyVJjt_9aIgp1wyRG1LOduWbUG9LvhzKwIl5-FNOImJKtG62cA7YPg96i8"/>
+</div>
+</div>
+<!-- Small Stat Card 1 -->
+<div class="md:col-span-4 bg-primary-container text-on-primary-container rounded-DEFAULT p-6 flex flex-col justify-center border border-primary">
+<span class="material-symbols-outlined text-secondary-fixed mb-3" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h4 class="font-headline-md text-headline-md text-on-primary">Connectivité Industrielle</h4>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Relier l'agriculture, l'exploitation minière et la fabrication régionales aux marchés mondiaux avec intégrité structurelle.</p>
+</div>
+<!-- Small Stat Card 2 -->
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant border-l-4 border-l-secondary-fixed rounded-DEFAULT p-6 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary-container mb-3" data-icon="route">route</span>
+<h4 class="font-headline-md text-headline-md text-primary-container">Routage Optimisé</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Approche algorithmique de la planification du fret terrestre et maritime.</p>
+</div>
+<!-- Small Stat Card 3 -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-6 flex flex-col justify-center bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNFMkU4RjAiLz48L3N2Zz4=')]">
+<div class="bg-surface/90 backdrop-blur-sm p-3 inline-block self-start border border-outline-variant mb-3">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Énoncé de Vision</span>
+</div>
+<p class="font-headline-md text-headline-md text-primary-container max-w-2xl">
+                        "Concevoir le cadre logistique le plus robuste, conforme et transparent opérant dans le paysage économique marocain, servant de pont définitif vers le commerce mondial."
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed full-width bottom-0">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter md:px-16 px-margin-mobile py-section-gap w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-6">
+<div>
+<img alt="KFTT Logo" class="h-12 w-auto bg-surface rounded p-1 inline-block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_gv_085FDBN9XYgbIJ1GIAN6DHHk8-iO7ZG1SAgEpT6V1_RHGe7_leFCb-H5RKbmdz1jBsJqSyBaQdLzvOyYTyICs1j_z8v0FJgP2Zz4wkWv0GDODdfhiGm2GjGr0aRAD4b17it35sWmv-qEV8haZau8RQBM4JGlvPR30lWCoNElwoyuH8k6laMOZPwv356L8C55Iwv9Vzhpo6rvv9DfGmwSKtLaq-LASjRGJHUVUXHeozyXpiaY-NFHbdjZJ3309qDkzjSnWCAI"/>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant max-w-sm">
+                    Logistique et expédition de fret de haute performance. Intégrité structurelle pour les chaînes d'approvisionnement mondiales.
+                </p>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant mt-2">
+    ICE: 003348123000065 | RC: 141973
+</p>
+</div>
+<div class="flex flex-col md:items-end justify-center gap-3">
+<nav class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4 focus:ring-2 focus:ring-secondary-fixed focus:ring-offset-2" href="#">Politique de Confidentialité</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4 focus:ring-2 focus:ring-secondary-fixed focus:ring-offset-2" href="#">Conditions d'Utilisation</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4 focus:ring-2 focus:ring-secondary-fixed focus:ring-offset-2" href="#">Réseau Mondial</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4 focus:ring-2 focus:ring-secondary-fixed focus:ring-offset-2" href="#">Suivre l'Expédition</a>
+</nav>
+<span class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant mt-6">
+                    © 2024 KFTT Logistique &amp; Expédition de Fret. Tous droits réservés.
+                </span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KFTT - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+    html[lang="fr"] {
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Roboto', sans-serif;
+    }
+    html[lang="ar"] {
+        --font-heading: 'Noto Sans Arabic', sans-serif;
+        --font-body: 'Noto Sans Arabic', sans-serif;
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.fill {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    html[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
+    html[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+            "primary": "#1D3557",
+            "primary-container": "#1D3557",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#1D3557",
+            "primary-fixed-dim": "#1D3557",
+            "growth-green": "#2A9D8F",
+            "secondary": "#2A9D8F",
+            "surface": "#F4F4F4",
+            "surface-bright": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#E5E5E5",
+            "on-surface": "#1A1A1A",
+            "on-surface-variant": "#44474e",
+            "outline-variant": "#c4c6cf",
+            "outline": "#74777f",
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "base": "8px",
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "section-gap": "80px",
+                "container-max": "1200px"
+        },
+        "fontFamily": {
+                "headline-md": ["var(--font-heading)"],
+                "display-lg-mobile": ["var(--font-heading)"],
+                "label-caps": ["var(--font-heading)"],
+                "body-md": ["var(--font-body)"],
+                "body-lg": ["var(--font-body)"],
+                "display-lg": ["var(--font-heading)"]
+        },
+        "fontSize": {
+                "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+        }
+      }
+    }
+  }
+</script>
+<script>
+    const translations = {
+        "fr": {
+            "nav_home": "Accueil",
+            "nav_services": "Services",
+            "nav_about": "À Propos",
+            "nav_contact": "Contact",
+            "nav_quote": "Demander un Devis",
+            "services_hero_title": "Solutions Logistiques",
+            "services_hero_subtext": "Des solutions complètes pour tous vos besoins en transit et transport international",
+            "services_overview_title": "Nos Services",
+            "services_overview_subtext": "Des solutions complètes pour tous vos besoins en transit et transport international",
+            "srv1_title": "Transit & Dédouanement",
+            "srv1_sub": "التنزيل والتخليص الجمركي",
+            "srv1_desc": "En tant que transitaire agréé par les Douanes Marocaines, nous gérons l'ensemble de vos formalités douanières avec expertise et rapidité.",
+            "srv1_li1": "Déclarations en douane",
+            "srv1_li2": "Gestion des documents",
+            "srv1_li3": "Conseil réglementaire",
+            "srv2_title": "Fret Aérien",
+            "srv2_sub": "الشحن الجوي",
+            "srv2_desc": "Pour vos envois urgents et marchandises de haute valeur, notre service de fret aérien garantit rapidité et sécurité.",
+            "srv2_li1": "Express et standard",
+            "srv2_li2": "Suivi en temps réel",
+            "srv2_li3": "Assurance cargo",
+            "srv3_title": "Fret Maritime (FCL & LCL)",
+            "srv3_sub": "الشحن البحري",
+            "srv3_desc": "Solutions maritimes économiques pour vos volumes importants. Conteneurs complets (FCL) ou groupage (LCL).",
+            "srv3_li1": "FCL 20' et 40'",
+            "srv3_li2": "LCL groupage",
+            "srv3_li3": "Conteneurs spéciaux",
+            "srv4_title": "Transport Routier",
+            "srv4_sub": "النقل البري",
+            "srv4_desc": "Transport routier national et international fiable. Flotte moderne pour livrer vos marchandises dans les délais.",
+            "srv4_li1": "National et international",
+            "srv4_li2": "Camions complets et partiels",
+            "srv4_li3": "Livraison porte-à-porte",
+            "srv5_title": "Groupage",
+            "srv5_sub": "الشحن المجمع",
+            "srv5_desc": "Service de groupage pour optimiser vos coûts sur petites et moyennes expéditions.",
+            "srv5_li1": "Consolidation maritime",
+            "srv5_li2": "Consolidation aérienne",
+            "srv5_li3": "Départs réguliers",
+            "srv6_title": "Import-Export Complet",
+            "srv6_sub": "الاستيراد والتصدير المتكامل",
+            "srv6_desc": "Gestion de A à Z de votre chaîne logistique internationale.",
+            "srv6_li1": "Gestion multimodale",
+            "srv6_li2": "Coordination complète",
+            "srv6_li3": "Suivi centralisé",
+            "proc_title": "Notre Processus - Comment nous travaillons",
+            "proc1_title": "Consultation",
+            "proc1_desc": "Analyse de vos besoins et recommandations",
+            "proc2_title": "Planification",
+            "proc2_desc": "Élaboration de la solution optimale",
+            "proc3_title": "Exécution",
+            "proc3_desc": "Mise en œuvre et suivi en temps réel",
+            "proc4_title": "Livraison",
+            "proc4_desc": "Réception et reporting complet",
+            "cta_title": "Besoin d'un Plan Structurel Spécialisé ?",
+            "cta_subtext": "Contactez notre équipe d'ingénierie pour concevoir un plan logistique sur mesure.",
+            "cta_btn": "Lancer le Projet",
+            "footer_rights": "© 2024 KFTT Logistique & Expédition de Fret. Tous droits réservés.",
+            "footer_privacy": "Politique de Confidentialité",
+            "footer_terms": "Conditions d'Utilisation",
+            "footer_network": "Réseau Mondial",
+            "footer_track": "Suivre l'Expédition"
+        },
+        "ar": {
+            "nav_home": "الرئيسية",
+            "nav_services": "خدماتنا",
+            "nav_about": "من نحن",
+            "nav_contact": "تواصل معنا",
+            "nav_quote": "طلب عرض سعر",
+            "services_hero_title": "حلول لوجستية",
+            "services_hero_subtext": "حلول شاملة لجميع احتياجات العبور والنقل الدولي",
+            "services_overview_title": "خدماتنا",
+            "services_overview_subtext": "حلول شاملة لجميع احتياجات العبور والنقل الدولي",
+            "srv1_title": "الترانزيت والتخليص الجمركي",
+            "srv1_sub": "Transit & Dédouanement",
+            "srv1_desc": "بصفتنا وكيل شحن معتمد من الجمارك المغربية، ندير جميع الإجراءات الجمركية الخاصة بك بخبرة وسرعة.",
+            "srv1_li1": "التصريحات الجمركية",
+            "srv1_li2": "إدارة الوثائق",
+            "srv1_li3": "استشارات تنظيمية",
+            "srv2_title": "الشحن الجوي",
+            "srv2_sub": "Fret Aérien",
+            "srv2_desc": "للشحنات العاجلة والبضائع عالية القيمة، تضمن خدمة الشحن الجوي لدينا السرعة والأمان.",
+            "srv2_li1": "سريع وعادي",
+            "srv2_li2": "تتبع في الوقت الفعلي",
+            "srv2_li3": "تأمين البضائع",
+            "srv3_title": "الشحن البحري (FCL و LCL)",
+            "srv3_sub": "Fret Maritime",
+            "srv3_desc": "حلول بحرية اقتصادية للكميات الكبيرة. حاويات كاملة (FCL) أو شحن مجمع (LCL).",
+            "srv3_li1": "حاويات 20 و 40 قدم",
+            "srv3_li2": "شحن مجمع LCL",
+            "srv3_li3": "حاويات خاصة",
+            "srv4_title": "النقل البري",
+            "srv4_sub": "Transport Routier",
+            "srv4_desc": "نقل بري وطني ودولي موثوق. أسطول حديث لتسليم بضائعك في الوقت المحدد.",
+            "srv4_li1": "وطني ودولي",
+            "srv4_li2": "شاحنات كاملة وجزئية",
+            "srv4_li3": "توصيل من الباب إلى الباب",
+            "srv5_title": "الشحن المجمع",
+            "srv5_sub": "Groupage",
+            "srv5_desc": "خدمة التجميع لتحسين التكاليف الخاصة بك على الشحنات الصغيرة والمتوسطة.",
+            "srv5_li1": "تجميع بحري",
+            "srv5_li2": "تجميع جوي",
+            "srv5_li3": "مغادرة منتظمة",
+            "srv6_title": "الاستيراد والتصدير المتكامل",
+            "srv6_sub": "Import-Export",
+            "srv6_desc": "إدارة شاملة لسلسلة التوريد الدولية الخاصة بك من الألف إلى الياء.",
+            "srv6_li1": "إدارة متعددة الوسائط",
+            "srv6_li2": "تنسيق شامل",
+            "srv6_li3": "تتبع مركزي",
+            "proc_title": "عمليتنا - كيف نعمل",
+            "proc1_title": "استشارة",
+            "proc1_desc": "تحليل احتياجاتك وتقديم التوصيات",
+            "proc2_title": "تخطيط",
+            "proc2_desc": "تطوير الحل الأمثل",
+            "proc3_title": "تنفيذ",
+            "proc3_desc": "التنفيذ والتتبع في الوقت الفعلي",
+            "proc4_title": "تسليم",
+            "proc4_desc": "الاستلام وتقديم تقارير شاملة",
+            "cta_title": "هل تحتاج إلى خطة هيكلية متخصصة؟",
+            "cta_subtext": "اتصل بفريق الهندسة لدينا لتصميم خطة لوجستية مخصصة.",
+            "cta_btn": "بدء المشروع",
+            "footer_rights": "© 2024 KFTT لوجستيات وشحن. جميع الحقوق محفوظة.",
+            "footer_privacy": "سياسة الخصوصية",
+            "footer_terms": "شروط الاستخدام",
+            "footer_network": "الشبكة العالمية",
+            "footer_track": "تتبع الشحنة"
+        }
+    };
+
+    function toggleLanguage() {
+        const currentLang = localStorage.getItem('language_pref') || 'fr';
+        const newLang = currentLang === 'fr' ? 'ar' : 'fr';
+        setLanguage(newLang);
+    }
+
+    function setLanguage(lang) {
+        localStorage.setItem('language_pref', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+        
+        document.getElementById('lang-toggle-text').innerText = lang === 'fr' ? 'AR' : 'FR';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language_pref') || 'fr';
+        setLanguage(savedLang);
+        
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<nav class="bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-[64px] py-base max-w-[1536px] mx-auto">
+<a class="flex items-center" href="index.html">
+<img alt="KFTT Logo" class="h-10 w-auto object-contain" src="logos/LogoKftt enhanced photoroom.png"/>
+</a>
+<div class="hidden md:flex gap-gutter items-center font-label-caps text-label-caps uppercase tracking-wider">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="index.html" data-i18n="nav_home">Accueil</a>
+<a class="text-primary border-b-2 border-growth-green font-bold pb-1 hover:bg-surface-container-low transition-all duration-200 opacity-80" href="services.html" data-i18n="nav_services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="apropos.html" data-i18n="nav_about">À Propos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low duration-200 p-1 rounded" href="contact.html" data-i18n="nav_contact">Contact</a>
+</div>
+<div class="flex items-center gap-[12px]">
+<button onclick="toggleLanguage()" class="font-label-caps text-label-caps px-2 py-1 border border-outline-variant rounded hover:bg-surface-container-low transition-colors flex items-center gap-1 text-primary">
+    <span class="material-symbols-outlined text-[16px]">language</span>
+    <span id="lang-toggle-text">AR</span>
+</button>
+<a href="contact.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-[24px] py-[12px] rounded hidden md:block hover:bg-opacity-90 transition-colors" data-i18n="nav_quote">Demander un Devis</a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-1">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant px-margin-mobile py-4 flex flex-col gap-4 font-label-caps uppercase tracking-wider">
+<a class="text-on-surface-variant" href="index.html" data-i18n="nav_home">Accueil</a>
+<a class="text-primary font-bold" href="services.html" data-i18n="nav_services">Services</a>
+<a class="text-on-surface-variant" href="apropos.html" data-i18n="nav_about">À Propos</a>
+<a class="text-on-surface-variant" href="contact.html" data-i18n="nav_contact">Contact</a>
+<a href="contact.html" class="bg-primary text-on-primary text-center py-2 rounded mt-2" data-i18n="nav_quote">Demander un Devis</a>
+</div>
+</nav>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full bg-primary text-on-primary py-section-gap overflow-hidden flex items-center min-h-[300px]">
+<div class="absolute inset-0 z-0 bg-primary">
+<img class="w-full h-full object-cover opacity-20 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9JsvFHNG8OvJ04GrKKTwOC_la2cUeDPGBDibJ-NoznYBJAdWIWcZE_yXD7mY8VGEt_WQ5WbNXGSdF9xQtZkoLX7IK2lh_4KAG5jWz5g5CQS7I50KG__kDuyB79tmuapdEo2luCQPJHBjqmBI-_2BroVoTxyQsyrEBBpxVDliYcls0YZnrUAzjUDFhURKPXx0JhiYl-AzFDOQwaF6oEZJtQK1qwQHUsQ3QMb0l0LBQqeKrYfZ_AZbzcnoLphCpR5ZcLIl-qvVyLl8"/>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg mb-base text-on-primary" data-i18n="services_hero_title">Solutions Logistiques</h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-2xl" data-i18n="services_hero_subtext">
+Des solutions complètes pour tous vos besoins en transit et transport international
+</p>
+</div>
+</div>
+</section>
+
+<!-- Bento Grid Services Overview -->
+<section class="py-section-gap bg-surface-bright">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-gutter text-center md:text-start">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-base" data-i18n="services_overview_title">Nos Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mx-auto md:mx-0" data-i18n="services_overview_subtext">
+Des solutions complètes pour tous vos besoins en transit et transport international
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Customs Transit -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv1_title">Transit & Dédouanement</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv1_sub">التنزيل والتخليص الجمركي</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv1_desc">
+En tant que transitaire agréé par les Douanes Marocaines, nous gérons l'ensemble de vos formalités douanières avec expertise et rapidité.
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv1_li1">Déclarations en douane</li>
+<li data-i18n="srv1_li2">Gestion des documents</li>
+<li data-i18n="srv1_li3">Conseil réglementaire</li>
+</ul>
+</div>
+<!-- Air Freight -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-growth-green text-white rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">flight</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv2_title">Fret Aérien</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv2_sub">الشحن الجوي</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv2_desc">
+Pour vos envois urgents et marchandises de haute valeur, notre service de fret aérien garantit rapidité et sécurité.
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv2_li1">Express et standard</li>
+<li data-i18n="srv2_li2">Suivi en temps réel</li>
+<li data-i18n="srv2_li3">Assurance cargo</li>
+</ul>
+</div>
+<!-- Sea Freight -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">directions_boat</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv3_title">Fret Maritime (FCL & LCL)</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv3_sub">الشحن البحري</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv3_desc">
+Solutions maritimes économiques pour vos volumes importants. Conteneurs complets (FCL) ou groupage (LCL).
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv3_li1">FCL 20' et 40'</li>
+<li data-i18n="srv3_li2">LCL groupage</li>
+<li data-i18n="srv3_li3">Conteneurs spéciaux</li>
+</ul>
+</div>
+<!-- Road Freight -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-growth-green text-white rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv4_title">Transport Routier</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv4_sub">النقل البري</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv4_desc">
+Transport routier national et international fiable. Flotte moderne pour livrer vos marchandises dans les délais.
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv4_li1">National et international</li>
+<li data-i18n="srv4_li2">Camions complets et partiels</li>
+<li data-i18n="srv4_li3">Livraison porte-à-porte</li>
+</ul>
+</div>
+<!-- Groupage -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv5_title">Groupage</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv5_sub">الشحن المجمع</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv5_desc">
+Service de groupage pour optimiser vos coûts sur petites et moyennes expéditions.
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv5_li1">Consolidation maritime</li>
+<li data-i18n="srv5_li2">Consolidation aérienne</li>
+<li data-i18n="srv5_li3">Départs réguliers</li>
+</ul>
+</div>
+<!-- Import-Export -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-gutter flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-growth-green text-white rounded-full flex items-center justify-center mb-gutter">
+<span class="material-symbols-outlined fill text-[24px]">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="srv6_title">Import-Export Complet</h3>
+<p class="font-body-sm text-[14px] text-on-surface-variant mb-base font-bold text-growth-green" data-i18n="srv6_sub">الاستيراد والتصدير المتكامل</p>
+<p class="font-body-md text-body-md text-on-surface mb-base" data-i18n="srv6_desc">
+Gestion de A à Z de votre chaîne logistique internationale.
+</p>
+<ul class="list-disc pl-5 rtl:pr-5 rtl:pl-0 mt-auto font-body-md text-body-md text-on-surface-variant space-y-1">
+<li data-i18n="srv6_li1">Gestion multimodale</li>
+<li data-i18n="srv6_li2">Coordination complète</li>
+<li data-i18n="srv6_li3">Suivi centralisé</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Process Section -->
+<section class="py-section-gap bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-gutter text-center">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-base" data-i18n="proc_title">Notre Processus - Comment nous travaillons</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mb-base font-bold text-2xl">1</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="proc1_title">Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="proc1_desc">Analyse de vos besoins et recommandations</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-growth-green text-white rounded-full flex items-center justify-center mb-base font-bold text-2xl">2</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="proc2_title">Planification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="proc2_desc">Élaboration de la solution optimale</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mb-base font-bold text-2xl">3</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="proc3_title">Exécution</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="proc3_desc">Mise en œuvre et suivi en temps réel</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-growth-green text-white rounded-full flex items-center justify-center mb-base font-bold text-2xl">4</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs" data-i18n="proc4_title">Livraison</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="proc4_desc">Réception et reporting complet</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="border-t border-outline-variant bg-surface-bright py-section-gap">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter">
+<div class="text-center md:text-start">
+<h3 class="font-headline-md text-headline-md text-primary mb-base" data-i18n="cta_title">Besoin d'un Plan Structurel Spécialisé ?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cta_subtext">Contactez notre équipe d'ingénierie pour concevoir un plan logistique sur mesure.</p>
+</div>
+<a href="contact.html" class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-[32px] py-[16px] rounded hover:opacity-90 transition-opacity whitespace-nowrap" data-i18n="cta_btn">
+    Lancer le Projet
+</a>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary w-full mt-auto text-white">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-[64px] py-[80px] max-w-[1536px] mx-auto w-full">
+<div class="flex flex-col gap-[24px]">
+<a class="flex items-center w-fit" href="index.html">
+<img alt="KFTT Logo" class="h-12 w-auto object-contain bg-surface p-1 rounded" src="logos/LogoKftt enhanced photoroom.png"/>
+</a>
+<div class="font-body-md text-body-md text-white/80 flex flex-col gap-1">
+<p data-i18n="footer_rights">© 2024 KFTT Logistique & Expédition de Fret. Tous droits réservés.</p>
+<p>ICE: 003348123000065 | RC: 141973</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-center">
+<div class="flex flex-wrap gap-[24px] font-body-md text-body-md">
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_privacy">Politique de Confidentialité</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_terms">Conditions d'Utilisation</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_network">Réseau Mondial</a>
+<a class="text-white/80 hover:text-growth-green hover:underline decoration-growth-green underline-offset-4 transition-colors" href="#" data-i18n="footer_track">Suivre l'Expédition</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
