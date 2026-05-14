@@ -1,348 +1,80 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact KFTT Logistics</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<style>
-    html[lang="fr"] {
-        --font-heading: 'Montserrat', sans-serif;
-        --font-body: 'Roboto', sans-serif;
-    }
-    html[lang="ar"] {
-        --font-heading: 'Noto Sans Arabic', sans-serif;
-        --font-body: 'Noto Sans Arabic', sans-serif;
-    }
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    .material-symbols-outlined.filled {
-        font-variation-settings: 'FILL' 1;
-    }
-    html[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
-    html[dir="rtl"] .mr-auto { margin-right: 0; margin-left: auto; }
-    html[dir="rtl"] .pl-10 { padding-left: 0; padding-right: 2.5rem; }
-    html[dir="rtl"] .pr-4 { padding-right: 0; padding-left: 1rem; }
-    html[dir="rtl"] .left-3 { left: auto; right: 0.75rem; }
-</style>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}.material-symbols-outlined.filled{font-variation-settings:'FILL' 1;}</style>
 <script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-            "primary": "#1D3557",
-            "primary-container": "#1D3557",
-            "on-primary": "#ffffff",
-            "primary-fixed": "#1D3557",
-            "primary-fixed-dim": "#1D3557",
-            "growth-green": "#2A9D8F",
-            "secondary": "#2A9D8F",
-            "secondary-fixed": "#2A9D8F",
-            "surface": "#F4F4F4",
-            "surface-bright": "#ffffff",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-low": "#E5E5E5",
-            "on-surface": "#1A1A1A",
-            "on-surface-variant": "#44474e",
-            "outline-variant": "#c4c6cf",
-            "outline": "#74777f",
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "base": "8px",
-                "margin-mobile": "16px",
-                "gutter": "24px",
-                "section-gap": "80px",
-                "container-max": "1200px",
-                "sm": "12px",
-                "md": "24px",
-                "lg": "48px",
-                "xl": "80px",
-                "xs": "4px",
-                "margin-desktop": "64px"
-        },
-        "fontFamily": {
-                "headline-md": ["var(--font-heading)"],
-                "display-lg-mobile": ["var(--font-heading)"],
-                "label-caps": ["var(--font-heading)"],
-                "body-md": ["var(--font-body)"],
-                "body-lg": ["var(--font-body)"],
-                "display-lg": ["var(--font-heading)"],
-                "headline-xl": ["var(--font-heading)"],
-                "headline-lg": ["var(--font-heading)"],
-                "label-sm": ["var(--font-heading)"]
-        },
-        "fontSize": {
-                "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
-                "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
-        }
-      }
-    }
-  }
-</script>
-<script>
-    const translations = {
-        "fr": {
-            "nav_home": "Accueil",
-            "nav_services": "Services",
-            "nav_about": "À Propos",
-            "nav_contact": "Contact",
-            "nav_quote": "Demander un Devis",
-            "contact_hero_title": "Portée Mondiale, Expertise Locale",
-            "contact_hero_subtext": "Connectez-vous avec nos spécialistes en logistique pour rationaliser votre chaîne d'approvisionnement. Nous fournissons des solutions de fret robustes et hautement conformes, adaptées à vos besoins opérationnels.",
-            "contact_office_title": "Siège Social",
-            "contact_addr_label": "Adresse",
-            "contact_addr_val": "Rte de Safi, Burj Malak, Imm B, N°24, Q.I., Marrakech, Maroc",
-            "contact_phone_label": "Opérations Téléphoniques",
-            "contact_email_label": "Bureau Email",
-            "contact_form_title": "Demander un Devis",
-            "contact_form_subtext": "Fournissez les détails de votre expédition pour une évaluation opérationnelle standardisée.",
-            "form_name": "Nom Complet",
-            "form_name_placeholder": "Jean Dupont",
-            "form_company": "Nom de l'Entreprise",
-            "form_company_placeholder": "Acme Corp",
-            "form_service": "Type de Service Requis",
-            "form_service_opt0": "Sélectionnez un type de transport...",
-            "form_service_opt1": "Fret Maritime / Dédouanement",
-            "form_service_opt2": "Fret Aérien",
-            "form_service_opt3": "Fret Routier / Transport Routier",
-            "form_service_opt4": "Groupage / Import-Export / Conseil Logistique",
-            "form_message": "Besoins Opérationnels / Message",
-            "form_message_placeholder": "Fournissez les dimensions de la cargaison, le poids, l'origine et la destination...",
-            "form_submit": "▷ ENVOYER LA DEMANDE",
-            "footer_rights": "© 2024 KFTT Logistique & Expédition de Fret. Tous droits réservés.",
-            "footer_privacy": "Politique de Confidentialité",
-            "footer_terms": "Conditions d'Utilisation",
-            "footer_network": "Réseau Mondial",
-            "footer_track": "Suivre l'Expédition"
-        },
-        "ar": {
-            "nav_home": "الرئيسية",
-            "nav_services": "خدماتنا",
-            "nav_about": "من نحن",
-            "nav_contact": "تواصل معنا",
-            "nav_quote": "طلب عرض سعر",
-            "contact_hero_title": "نطاق عالمي، خبرة محلية",
-            "contact_hero_subtext": "تواصل مع متخصصينا اللوجستيين لتبسيط سلسلة التوريد الخاصة بك. نقدم حلول شحن قوية وعالية الامتثال مصممة لاحتياجاتك التشغيلية.",
-            "contact_office_title": "المقر الرئيسي",
-            "contact_addr_label": "العنوان",
-            "contact_addr_val": "طريق آسفي، برج ملاك، مبنى ب، رقم 24، الحي الصناعي، مراكش، المغرب",
-            "contact_phone_label": "العمليات الهاتفية",
-            "contact_email_label": "البريد الإلكتروني",
-            "contact_form_title": "طلب عرض سعر",
-            "contact_form_subtext": "قدم تفاصيل شحنتك لتقييم تشغيلي موحد.",
-            "form_name": "الاسم الكامل",
-            "form_name_placeholder": "أحمد محمد",
-            "form_company": "اسم الشركة",
-            "form_company_placeholder": "شركة أكيم",
-            "form_service": "نوع الخدمة المطلوبة",
-            "form_service_opt0": "حدد نوع النقل...",
-            "form_service_opt1": "الشحن البحري / التخليص الجمركي",
-            "form_service_opt2": "الشحن الجوي",
-            "form_service_opt3": "الشحن البري / النقل البري",
-            "form_service_opt4": "شحن مجمع / استيراد وتصدير / استشارة لوجستية",
-            "form_message": "الاحتياجات التشغيلية / الرسالة",
-            "form_message_placeholder": "قدم أبعاد البضائع، والوزن، وبلد المنشأ، والوجهة...",
-            "form_submit": "▷ إرسال الطلب",
-            "footer_rights": "© 2024 KFTT لوجستيات وشحن. جميع الحقوق محفوظة.",
-            "footer_privacy": "سياسة الخصوصية",
-            "footer_terms": "شروط الاستخدام",
-            "footer_network": "الشبكة العالمية",
-            "footer_track": "تتبع الشحنة"
-        }
-    };
-
-    function toggleLanguage() {
-        const currentLang = localStorage.getItem('language_pref') || 'fr';
-        const newLang = currentLang === 'fr' ? 'ar' : 'fr';
-        setLanguage(newLang);
-    }
-
-    function setLanguage(lang) {
-        localStorage.setItem('language_pref', lang);
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
-            }
-        });
-
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            const key = el.getAttribute('data-i18n-placeholder');
-            if (translations[lang][key]) {
-                el.placeholder = translations[lang][key];
-            }
-        });
-        
-        document.getElementById('lang-toggle-text').innerText = lang === 'fr' ? 'AR' : 'FR';
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedLang = localStorage.getItem('language_pref') || 'fr';
-        setLanguage(savedLang);
-        
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    });
+tailwind.config={theme:{extend:{"colors":{"primary-container":"#1a365d","surface-container-highest":"#e0e3e8","surface-bright":"#f7f9ff","on-surface-variant":"#43474e","secondary-fixed":"#c2f363","surface-container-lowest":"#ffffff","surface":"#f7f9ff","primary-fixed":"#d6e3ff","primary-fixed-dim":"#adc7f7","outline-variant":"#c4c6cf","background":"#f7f9ff","surface-container-high":"#e5e8ee","on-primary":"#ffffff","on-surface":"#181c20","surface-container-low":"#f1f4f9","on-primary-container":"#86a0cd","outline":"#74777f","surface-container":"#ebeef3","primary":"#002045","growth-green":"#84B026","ocean-navy":"#1A365D"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"24px","margin-mobile":"16px","sm":"12px","lg":"48px","margin-desktop":"64px","xl":"80px","base":"8px","xs":"4px","md":"24px","section-gap":"80px","container-max":"1200px"},"fontFamily":{"headline-xl":["Montserrat"],"headline-lg":["Montserrat"],"body-lg":["Open Sans"],"label-sm":["Montserrat"],"headline-md":["Montserrat"],"body-md":["Open Sans"]},"fontSize":{"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}
 </script>
 </head>
-<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
-<!-- TopNavBar Shared Component -->
-<nav class="bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50">
-<div class="flex justify-between items-center w-full px-margin-desktop py-base max-w-[1536px] mx-auto">
-<div class="flex items-center">
-<a href="index.html">
-<img alt="KFTT Logo" class="h-10 w-auto object-contain" src="logos/LogoKftt enhanced photoroom.png"/>
-</a>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<nav class="bg-surface border-b border-outline-variant top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-base max-w-screen-2xl mx-auto">
+<a href="index.html"><img alt="KFTT Logo" class="h-10 w-auto" src="logos/logo.png"/></a>
+<div class="hidden md:flex space-x-md">
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors py-base px-sm hover:bg-surface-container-low transition-all duration-200" href="index.html">Accueil</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors py-base px-sm hover:bg-surface-container-low transition-all duration-200" href="services.html">Services</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors py-base px-sm hover:bg-surface-container-low transition-all duration-200" href="apropos.html">À Propos</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container border-b-2 border-[#84B026] font-bold pb-1 py-base px-sm" href="contact.html">Contact</a>
 </div>
-<div class="hidden md:flex space-x-md font-label-caps text-label-caps uppercase tracking-wider items-center gap-gutter">
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1 hover:bg-surface-container-low duration-200 rounded p-1" href="index.html" data-i18n="nav_home">Accueil</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1 hover:bg-surface-container-low duration-200 rounded p-1" href="services.html" data-i18n="nav_services">Services</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors py-1 hover:bg-surface-container-low duration-200 rounded p-1" href="apropos.html" data-i18n="nav_about">À Propos</a>
-<a class="text-primary border-b-2 border-growth-green font-bold pb-1 hover:bg-surface-container-low transition-all duration-200 opacity-80" href="contact.html" data-i18n="nav_contact">Contact</a>
-</div>
-<div class="flex items-center gap-[12px]">
-<button onclick="toggleLanguage()" class="font-label-caps text-label-caps px-2 py-1 border border-outline-variant rounded hover:bg-surface-container-low transition-colors flex items-center gap-1 text-primary">
-    <span class="material-symbols-outlined text-[16px]">language</span>
-    <span id="lang-toggle-text">AR</span>
-</button>
-<button class="hidden md:block bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider px-[24px] py-[12px] rounded active:opacity-80 active:scale-95 transition-transform hover:bg-opacity-90" data-i18n="nav_quote">
-    Demander un Devis
-</button>
-<button id="mobile-menu-btn" class="md:hidden text-primary p-1">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<div class="flex items-center space-x-md">
+<a href="contact.html" class="hidden md:block bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-md py-sm rounded hover:bg-primary transition-colors">Demander un Devis</a>
+<button id="mobile-menu-btn" class="md:hidden text-primary-container"><span class="material-symbols-outlined">menu</span></button>
 </div>
 </div>
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant px-margin-mobile py-4 flex flex-col gap-4 font-label-caps uppercase tracking-wider">
-<a class="text-on-surface-variant" href="index.html" data-i18n="nav_home">Accueil</a>
-<a class="text-on-surface-variant" href="services.html" data-i18n="nav_services">Services</a>
-<a class="text-on-surface-variant" href="apropos.html" data-i18n="nav_about">À Propos</a>
-<a class="text-primary font-bold" href="contact.html" data-i18n="nav_contact">Contact</a>
-<a href="contact.html" class="bg-primary text-on-primary text-center py-2 rounded mt-2" data-i18n="nav_quote">Demander un Devis</a>
+<div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-outline-variant px-margin-mobile py-4 flex flex-col gap-4 font-label-sm text-label-sm uppercase tracking-wider">
+<a class="text-on-surface-variant" href="index.html">Accueil</a><a class="text-on-surface-variant" href="services.html">Services</a><a class="text-on-surface-variant" href="apropos.html">À Propos</a><a class="text-primary-container font-bold" href="contact.html">Contact</a>
+<a href="contact.html" class="bg-primary-container text-on-primary text-center py-2 rounded mt-2">Demander un Devis</a>
 </div>
 </nav>
 
-<!-- Main Content -->
 <main class="flex-grow flex flex-col">
-<!-- Hero Section -->
-<section class="relative w-full bg-surface-container-low py-xl px-margin-desktop overflow-hidden border-b border-outline-variant">
-<div class="absolute inset-0 z-0">
-<img alt="Background image" class="w-full h-full object-cover opacity-20 mix-blend-multiply grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1AN1uPxET1jat1NT4Iks7hBdsjL-v21prjTSuJib4YTejMYKunZ5xO0KrXqN5cDfNB42iu5saIkM3YYW-s-oStxmdOMVL-QEK9VXxz7YD8TSnskSww8Lqtx3BmKjAjnSK190B2FCfZmNPAZizUs0zbX0lzCrIDZ8CdpzWiEuiSbgZYsG0cdvPXfQu6x4j8HwvA38EWdglv5lwh1hRxwoUKt5xEtaoGx0CnX6WvFNdv_71dNDFWKKooV_eHlbf5m7ASK7NjLnJ4x4"/>
-</div>
+<section class="relative w-full bg-surface-container-high py-xl px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0"><img alt="Background" class="w-full h-full object-cover opacity-20 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1AN1uPxET1jat1NT4Iks7hBdsjL-v21prjTSuJib4YTejMYKunZ5xO0KrXqN5cDfNB42iu5saIkM3YYW-s-oStxmdOMVL-QEK9VXxz7YD8TSnskSww8Lqtx3BmKjAjnSK190B2FCfZmNPAZizUs0zbX0lzCrIDZ8CdpzWiEuiSbgZYsG0cdvPXfQu6x4j8HwvA38EWdglv5lwh1hRxwoUKt5xEtaoGx0CnX6WvFNdv_71dNDFWKKooV_eHlbf5m7ASK7NjLnJ4x4"/></div>
 <div class="relative z-10 max-w-screen-2xl mx-auto flex flex-col items-center text-center">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-sm" data-i18n="contact_hero_title">Portée Mondiale, Expertise Locale</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-i18n="contact_hero_subtext">
-    Connectez-vous avec nos spécialistes en logistique pour rationaliser votre chaîne d'approvisionnement. Nous fournissons des solutions de fret robustes et hautement conformes, adaptées à vos besoins opérationnels.
-</p>
+<h1 class="font-headline-xl text-headline-xl text-primary-container mb-sm">Portée Mondiale, Expertise Locale</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Connectez-vous avec nos spécialistes en logistique pour rationaliser votre chaîne d'approvisionnement. Nous fournissons des solutions de fret robustes et hautement conformes, adaptées à vos besoins opérationnels.</p>
 </div>
 </section>
 
-<!-- Contact Layout -->
-<section class="w-full px-margin-desktop py-lg max-w-screen-2xl mx-auto flex-grow">
+<section class="w-full px-margin-mobile md:px-margin-desktop py-lg max-w-screen-2xl mx-auto flex-grow">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Left Column: Contact Info & Map -->
 <div class="lg:col-span-5 flex flex-col gap-gutter">
-<!-- Info Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md h-auto hover:border-primary transition-colors">
-<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-sm" data-i18n="contact_office_title">Siège Social</h2>
-<div class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-growth-green mt-xs">location_on</span>
-<div>
-<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs" data-i18n="contact_addr_label">Adresse</h3>
-<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="contact_addr_val">
-    Rte de Safi, Burj Malak, Imm B, N°24, Q.I., Marrakech, Maroc
-</p>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md h-auto">
+<h2 class="font-headline-md text-headline-md text-primary-container border-b border-outline-variant pb-sm">Siège Social</h2>
+<div class="flex items-start gap-sm"><span class="material-symbols-outlined text-[#84B026] mt-xs">location_on</span><div><h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs">Adresse</h3><p class="font-body-md text-body-md text-on-surface-variant">rte de Safi Burj Malak<br/>Marrakech, Morocco</p></div></div>
+<div class="flex items-start gap-sm"><span class="material-symbols-outlined text-[#84B026] mt-xs">phone</span><div><h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs">Opérations Téléphoniques</h3><p class="font-body-md text-body-md text-on-surface-variant">+212 524 33 44 55</p></div></div>
+<div class="flex items-start gap-sm"><span class="material-symbols-outlined text-[#84B026] mt-xs">mail</span><div><h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs">Bureau Email</h3><p class="font-body-md text-body-md text-on-surface-variant">contact@kftt-logistics.com</p></div></div>
 </div>
-</div>
-<div class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-growth-green mt-xs">phone</span>
-<div>
-<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs" data-i18n="contact_phone_label">Opérations Téléphoniques</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-    <a href="tel:+212524356629" class="hover:text-growth-green transition-colors">+212 524 35 66 29</a><br/>
-    <a href="tel:+212661059467" class="hover:text-growth-green transition-colors">+212 661 05 94 67</a>
-</p>
-</div>
-</div>
-<div class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-growth-green mt-xs">mail</span>
-<div>
-<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider mb-xs" data-i18n="contact_email_label">Bureau Email</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-    <a href="mailto:contact@kftt-logistics.com" class="hover:text-growth-green transition-colors">contact@kftt-logistics.com</a>
-</p>
-</div>
-</div>
-</div>
-<!-- Map Card -->
-<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden h-[300px] flex-shrink-0 relative">
-<img alt="Map of Marrakech" class="w-full h-full object-cover filter brightness-75 contrast-125 sepia-0 saturate-50 hue-rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOQzTIIs9WDtYdPVS_QFojfkEnfz0q0J9ImRgPrn9f57slVHYAxGq-Oi2SFL8za5INOvNqgku2KGzzRM9ny3W43iZbtLae_hdtbFBcwDaZNWWxwkN_W5X3UAjF3jQzyUH8yuovyZI3Q5kLRNv0QHe2uySvgUbsb6mzPyYntqI_L9PiNFsyS7ESvJhJbNY83A0p4pOdMo8-TNFrKsCPKNvPGr2chkmr9l8MjZ5qxX8G8tvjJSizxmwm8t0xAFsugPNQeFVTm3a9krM"/>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden h-[300px] flex-shrink-0">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54310.33854453641!2d-8.0363!3d31.6295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech%2C%20Morocco!5e0!3m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Marrakech Map"></iframe>
 </div>
 </div>
 
-<!-- Right Column: Request Quote Form -->
 <div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col">
 <div class="mb-md border-b border-outline-variant pb-sm">
-<h2 class="font-headline-md text-headline-md text-primary" data-i18n="contact_form_title">Demander un Devis</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-xs" data-i18n="contact_form_subtext">Fournissez les détails de votre expédition pour une évaluation opérationnelle standardisée.</p>
+<h2 class="font-headline-md text-headline-md text-primary-container">Demander un Devis</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Fournissez les détails de votre expédition pour une évaluation opérationnelle standardisée.</p>
 </div>
-<form class="flex flex-col gap-md flex-grow" onsubmit="event.preventDefault(); alert('Form submitted!');">
+<form class="flex flex-col gap-md flex-grow" action="mailto:contact@kftt-logistics.com" method="post" enctype="text/plain">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-<div class="flex flex-col gap-xs">
-<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="name" data-i18n="form_name">Nom Complet</label>
-<input class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-growth-green focus:ring-1 focus:ring-growth-green transition-colors bg-surface-container-lowest text-on-surface" id="name" name="name" data-i18n-placeholder="form_name_placeholder" placeholder="Jean Dupont" type="text" required/>
+<div class="flex flex-col gap-xs"><label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="name">Nom Complet</label><input class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-[#84B026] focus:ring-1 focus:ring-[#84B026] transition-colors bg-surface-container-lowest text-on-surface" id="name" name="name" placeholder="Jean Dupont" type="text"/></div>
+<div class="flex flex-col gap-xs"><label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="company">Nom de l'Entreprise</label><input class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-[#84B026] focus:ring-1 focus:ring-[#84B026] transition-colors bg-surface-container-lowest text-on-surface" id="company" name="company" placeholder="Acme Corp" type="text"/></div>
 </div>
-<div class="flex flex-col gap-xs">
-<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="company" data-i18n="form_company">Nom de l'Entreprise</label>
-<input class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-growth-green focus:ring-1 focus:ring-growth-green transition-colors bg-surface-container-lowest text-on-surface" id="company" name="company" data-i18n-placeholder="form_company_placeholder" placeholder="Acme Corp" type="text" required/>
-</div>
-</div>
-<div class="flex flex-col gap-xs">
-<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="service" data-i18n="form_service">Type de Service Requis</label>
-<select class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-growth-green focus:ring-1 focus:ring-growth-green transition-colors bg-surface-container-lowest text-on-surface" id="service" name="service" required>
-<option disabled="" selected="" value="" data-i18n="form_service_opt0">Sélectionnez un type de transport...</option>
-<option value="ocean" data-i18n="form_service_opt1">Fret Maritime / Dédouanement</option>
-<option value="air" data-i18n="form_service_opt2">Fret Aérien</option>
-<option value="road" data-i18n="form_service_opt3">Fret Routier / Transport Routier</option>
-<option value="groupage" data-i18n="form_service_opt4">Groupage / Import-Export / Conseil Logistique</option>
-</select>
-</div>
-<div class="flex flex-col gap-xs flex-grow">
-<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="message" data-i18n="form_message">Besoins Opérationnels / Message</label>
-<textarea class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-growth-green focus:ring-1 focus:ring-growth-green transition-colors bg-surface-container-lowest text-on-surface resize-none flex-grow min-h-[150px]" id="message" name="message" data-i18n-placeholder="form_message_placeholder" placeholder="Fournissez les dimensions de la cargaison, le poids, l'origine et la destination..." rows="5" required></textarea>
-</div>
+<div class="flex flex-col gap-xs"><label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="service">Type de Service Requis</label>
+<select class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-[#84B026] focus:ring-1 focus:ring-[#84B026] transition-colors bg-surface-container-lowest text-on-surface appearance-none" id="service" name="service">
+<option disabled="" selected="" value="">Sélectionnez un type de transport...</option>
+<option value="ocean">Fret Maritime (FCL)</option><option value="air">Fret Aérien Express</option><option value="road">Transport Routier Transfrontalier</option><option value="customs">Dédouanement &amp; Conformité</option>
+</select></div>
+<div class="flex flex-col gap-xs flex-grow"><label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider" for="message">Besoins Opérationnels / Message</label>
+<textarea class="border border-outline-variant rounded px-sm py-sm font-body-md text-body-md focus:outline-none focus:border-[#84B026] focus:ring-1 focus:ring-[#84B026] transition-colors bg-surface-container-lowest text-on-surface resize-none flex-grow" id="message" name="message" placeholder="Fournissez les dimensions de la cargaison, le poids, l'origine et la destination..." rows="5"></textarea></div>
 <div class="pt-sm mt-auto">
-<button class="w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider px-md py-sm rounded active:opacity-80 active:scale-95 transition-transform hover:opacity-90 flex items-center justify-center gap-xs" type="submit">
-<span class="material-symbols-outlined filled text-[18px]">send</span>
-<span data-i18n="form_submit">▷ ENVOYER LA DEMANDE</span>
-</button>
+<button class="w-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-md py-sm rounded hover:bg-primary transition-colors flex items-center justify-center gap-xs" type="submit"><span class="material-symbols-outlined filled text-[18px]">send</span>Envoyer la Demande</button>
 </div>
 </form>
 </div>
@@ -350,27 +82,20 @@
 </section>
 </main>
 
-<!-- Footer Component -->
-<footer class="bg-primary w-full mt-auto text-white">
+<footer class="bg-primary-container w-full bottom-0">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-xl w-full max-w-screen-2xl mx-auto">
 <div class="flex flex-col items-start gap-sm">
-<div class="bg-surface rounded p-1">
-<a href="index.html">
-<img alt="KFTT Logo" class="h-10 w-auto" src="logos/LogoKftt enhanced photoroom.png"/>
-</a>
-</div>
-<p class="font-body-md text-body-md text-white/80 mt-2">
-    <span data-i18n="footer_rights">© 2024 KFTT Logistics & Freight Forwarding. Tous droits réservés.</span><br/>
-    ICE: 003348123000065 | RC: 141973
-</p>
+<div class="bg-surface-container-lowest rounded p-1"><img alt="KFTT Logo" class="h-10 w-auto" src="logos/logo.png"/></div>
+<p class="font-body-md text-body-md text-on-primary-container">© 2024 KFTT Logistics &amp; Freight Forwarding. Tous droits réservés.<br/>ICE: 003348123000065 | RC: 141973</p>
 </div>
 <div class="flex flex-wrap md:justify-end gap-md items-center">
-<a class="font-body-md text-body-md text-white/80 hover:text-growth-green transition-colors hover:underline decoration-growth-green underline-offset-4 focus:ring-2 focus:ring-growth-green focus:ring-offset-2 focus:outline-none rounded" href="#" data-i18n="footer_privacy">Politique de Confidentialité</a>
-<a class="font-body-md text-body-md text-white/80 hover:text-growth-green transition-colors hover:underline decoration-growth-green underline-offset-4 focus:ring-2 focus:ring-growth-green focus:ring-offset-2 focus:outline-none rounded" href="#" data-i18n="footer_terms">Conditions d'Utilisation</a>
-<a class="font-body-md text-body-md text-white/80 hover:text-growth-green transition-colors hover:underline decoration-growth-green underline-offset-4 focus:ring-2 focus:ring-growth-green focus:ring-offset-2 focus:outline-none rounded" href="#" data-i18n="footer_network">Réseau Mondial</a>
-<a class="font-body-md text-body-md text-white/80 hover:text-growth-green transition-colors hover:underline decoration-growth-green underline-offset-4 focus:ring-2 focus:ring-growth-green focus:ring-offset-2 focus:outline-none rounded" href="#" data-i18n="footer_track">Suivre l'Expédition</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-[#84B026] transition-colors hover:underline decoration-[#84B026] underline-offset-4 focus:ring-2 focus:ring-[#84B026] focus:ring-offset-2 focus:outline-none rounded" href="#">Politique de Confidentialité</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-[#84B026] transition-colors hover:underline decoration-[#84B026] underline-offset-4 focus:ring-2 focus:ring-[#84B026] focus:ring-offset-2 focus:outline-none rounded" href="#">Conditions d'Utilisation</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-[#84B026] transition-colors hover:underline decoration-[#84B026] underline-offset-4 focus:ring-2 focus:ring-[#84B026] focus:ring-offset-2 focus:outline-none rounded" href="#">Réseau Mondial</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-[#84B026] transition-colors hover:underline decoration-[#84B026] underline-offset-4 focus:ring-2 focus:ring-[#84B026] focus:ring-offset-2 focus:outline-none rounded" href="#">Suivre l'Expédition</a>
 </div>
 </div>
 </footer>
+<script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden');});</script>
 </body>
 </html>
